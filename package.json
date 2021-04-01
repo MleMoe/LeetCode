@@ -3,14 +3,9 @@
   "version": "1.0.1",
   "private": true,
   "description": "LeetCode Practice",
-  "repository": "https://github.com/YunYouJun/LeetCode.git",
+  "repository": "https://github.com/MleMoe/LeetCode.git",
   "bin": {
     "leet": "./cli/index.js"
-  },
-  "author": {
-    "email": "me@yunyoujun.cn",
-    "name": "云游君",
-    "url": "https://www.yunyoujun.cn"
   },
   "license": "MIT",
   "scripts": {

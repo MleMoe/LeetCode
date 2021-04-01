@@ -2,6 +2,13 @@ from typing import List
 
 from queue import Queue
 
+# Definition for a Node.
+class Node:
+    def __init__(self, val, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
 
 class TreeNode:
     def __init__(self, x):
