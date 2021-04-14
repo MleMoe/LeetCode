@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 const leetcode_url = 'https://leetcode-cn.com/problems/'
-const github_url = 'https://github.com/YunYouJun/LeetCode/tree/master/'
+const github_url = 'https://github.com/MleMoe/LeetCode/tree/master/'
 
 /**
  * 获取当前已完成的所有题目信息

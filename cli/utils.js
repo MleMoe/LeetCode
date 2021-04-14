@@ -1,21 +1,21 @@
-const fs = require("fs");
-const shell = require("shelljs");
-const inquirer = require("inquirer");
+const fs = require('fs')
+const shell = require('shelljs')
+const inquirer = require('inquirer')
 
-const { getAllProblems } = require("../utils/toc");
-const logger = require("./logger");
-const problemsFolder = "./problems";
+const { getAllProblems } = require('../utils/toc')
+const logger = require('./logger')
+const problemsFolder = './problems'
 // all problems info
-const problems = getAllProblems();
+const problems = getAllProblems()
 
 /**
  * 提交到 Git
  * @param {*} problem
  */
 function pushSolvedProblem(problem) {
-  shell.exec("git add -A");
-  shell.exec(`git commit -m "✅ solve ${problem.index}"`);
-  shell.exec("git push");
+  shell.exec('git add -A')
+  shell.exec(`git commit -m "✅ solve ${problem.index}"`)
+  shell.exec('git push')
 }
 
 /**
@@ -23,17 +23,17 @@ function pushSolvedProblem(problem) {
  * @param {*} info 题目信息
  */
 function writeProblemInfo(info) {
-  const problemFolder = `${problemsFolder}/${info.index}`;
+  const problemFolder = `${problemsFolder}/${info.index}`
   if (!fs.existsSync(problemFolder)) {
-    fs.mkdirSync(problemFolder);
+    fs.mkdirSync(problemFolder)
   }
   fs.writeFileSync(
     `${problemFolder}/package.json`,
     JSON.stringify(info, null, 2)
-  );
+  )
 
-  const templateText = getTemplateByLanguage(info.language);
-  fs.writeFileSync(`${problemFolder}/solution.${info.language}`, templateText);
+  const templateText = getTemplateByLanguage(info.language)
+  fs.writeFileSync(`${problemFolder}/solution.${info.language}`, templateText)
 }
 
 /**
@@ -41,11 +41,11 @@ function writeProblemInfo(info) {
  * @param {string} language
  */
 function getTemplateByLanguage(language) {
-  const template = `templates/solution.${language}`;
+  const template = `templates/solution.${language}`
   if (fs.existsSync(template)) {
-    return fs.readFileSync(template, "utf-8");
+    return fs.readFileSync(template, 'utf-8')
   } else {
-    logger.error(`检查模版文件夹或对应语言模版 ${template} 是否存在！`);
+    logger.error(`检查模版文件夹或对应语言模版 ${template} 是否存在！`)
   }
 }
 
@@ -56,57 +56,57 @@ function getTemplateByLanguage(language) {
 async function promptCategory() {
   const questions = [
     {
-      type: "list",
-      name: "category",
-      message: "题目类型",
+      type: 'list',
+      name: 'category',
+      message: '题目类型',
       choices: [
         {
-          name: "剑指 Offer",
-          value: "offer",
+          name: '剑指 Offer',
+          value: 'offer',
         },
         {
-          name: "LeetCode",
-          value: "leetcode",
+          name: 'LeetCode',
+          value: 'leetcode',
         },
       ],
     },
-  ];
+  ]
 
-  const answers = await inquirer.prompt(questions);
-  return answers.category;
+  const answers = await inquirer.prompt(questions)
+  return answers.category
 }
 
-async function promptID(category = "leetcode") {
+async function promptID(category = 'leetcode') {
   const questions = [
     {
-      type: "input",
-      name: "id",
-      message: "请输入题目 ID（序号）:",
+      type: 'input',
+      name: 'id',
+      message: '请输入题目 ID（序号）:',
     },
-  ];
+  ]
 
-  if (category === "leetcode") {
+  if (category === 'leetcode') {
     questions[0].validate = (val) => {
       if (Number.isInteger(parseInt(val))) {
-        return true;
+        return true
       } else {
-        return "题目 ID 应当是一个整数";
+        return '题目 ID 应当是一个整数'
       }
-    };
+    }
   }
 
-  const answers = await inquirer.prompt(questions);
-  return answers.id;
+  const answers = await inquirer.prompt(questions)
+  return answers.id
 }
 
-function findProblemByID(id, category = "leetcode") {
+function findProblemByID(id, category = 'leetcode') {
   return problems.find((problem) => {
-    if (category === "offer") {
-      return problem.category === "剑指 Offer" && problem.id === id;
-    } else if (category === "leetcode") {
-      return problem.id === parseInt(id);
+    if (category === 'offer') {
+      return problem.category === '剑指 Offer' && problem.id === id
+    } else if (category === 'leetcode') {
+      return problem.id === parseInt(id)
     }
-  });
+  })
 }
 
 module.exports = {
@@ -115,4 +115,4 @@ module.exports = {
   promptCategory,
   promptID,
   findProblemByID,
-};
+}

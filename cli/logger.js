@@ -1,4 +1,4 @@
-const { Logger } = require("@yunyoujun/logger");
-const logger = new Logger();
+const { Logger } = require('@yunyoujun/logger')
+const logger = new Logger()
 
-module.exports = logger;
+module.exports = logger
