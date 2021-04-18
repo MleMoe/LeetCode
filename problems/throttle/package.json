@@ -1,0 +1,8 @@
+{
+  "id": 2,
+  "category": "custom",
+  "title": "节流",
+  "index": "throttle",
+  "difficulty": "easy",
+  "language": "js"
+}

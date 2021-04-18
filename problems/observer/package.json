@@ -1,0 +1,8 @@
+{
+  "id": 4,
+  "category": "custom",
+  "title": "发布订阅",
+  "index": "observer",
+  "difficulty": "easy",
+  "language": "js"
+}

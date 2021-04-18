@@ -4,9 +4,6 @@
   "private": true,
   "description": "LeetCode Practice",
   "repository": "https://github.com/MleMoe/LeetCode.git",
-  "bin": {
-    "leet": "./cli/index.js"
-  },
   "license": "MIT",
   "scripts": {
     "build": "yarn generate:TOC && cp public/* dist",
@@ -17,6 +14,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "@yunyoujun/leetcode": "^0.0.3",
     "@yunyoujun/logger": "^0.1.2",
     "commander": "^7.2.0",
     "inquirer": "^8.0.0",
