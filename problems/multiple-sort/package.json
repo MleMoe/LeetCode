@@ -1,0 +1,8 @@
+{
+  "id": 8,
+  "category": "custom",
+  "title": "多重排序",
+  "index": "multiple-sort",
+  "difficulty": "easy",
+  "language": "ts"
+}

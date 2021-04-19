@@ -1,0 +1,8 @@
+{
+  "id": 7,
+  "category": "custom",
+  "title": "邮箱输入验证",
+  "index": "mail-check",
+  "difficulty": "easy",
+  "language": "ts"
+}
