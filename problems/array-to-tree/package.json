@@ -1,0 +1,8 @@
+{
+  "id": 5,
+  "category": "custom",
+  "title": "数组转树",
+  "index": "array-to-tree",
+  "difficulty": "easy",
+  "language": "js"
+}
