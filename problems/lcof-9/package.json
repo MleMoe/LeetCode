@@ -1,0 +1,8 @@
+{
+  "id": "9",
+  "category": "offer",
+  "title": "用两个栈实现队列",
+  "index": "lcof-9",
+  "difficulty": "easy",
+  "language": "ts"
+}
