@@ -1,0 +1,8 @@
+{
+  "id": "18",
+  "category": "offer",
+  "title": "删除链表的节点",
+  "index": "lcof-18",
+  "difficulty": "easy",
+  "language": "ts"
+}
