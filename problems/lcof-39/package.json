@@ -1,0 +1,8 @@
+{
+  "id": "39",
+  "category": "offer",
+  "title": "数组中出现次数超过一半的数字",
+  "index": "lcof-39",
+  "difficulty": "easy",
+  "language": "ts"
+}
