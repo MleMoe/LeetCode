@@ -1,5 +1,5 @@
-const path = require('path')
-const fs = require('fs')
+import * as fs from 'fs'
+import * as path from 'path'
 
 const leetcode_url = 'https://leetcode-cn.com/problems/'
 const github_url = 'https://github.com/MleMoe/LeetCode/tree/master/'
@@ -8,8 +8,7 @@ const github_url = 'https://github.com/MleMoe/LeetCode/tree/master/'
  * 获取当前已完成的所有题目信息
  */
 function getAllProblems() {
-  const rootFolder = process.cwd()
-  const problemsPath = './problems'
+  const problemsPath = 'problems'
 
   let problemsFolder = fs.readdirSync(problemsPath)
 
@@ -22,8 +21,10 @@ function getAllProblems() {
   })
 
   problemsFolder.forEach((problemFolder) => {
-    const info = require(`${rootFolder}/${problemsPath}/${problemFolder}/package.json`)
-    problems.push(info)
+    const data = fs
+      .readFileSync(`${problemsPath}/${problemFolder}/package.json`, 'UTF-8')
+      .toString()
+    problems.push(JSON.parse(data))
   })
 
   // 按序号升序排序
@@ -72,9 +73,4 @@ function generateProblemMd(problem) {
   }|\n`
 }
 
-module.exports = {
-  getAllProblems,
-  generateProblemMd,
-  readLanguageByExt,
-  getProblemById,
-}
+export { getAllProblems, generateProblemMd, readLanguageByExt, getProblemById }

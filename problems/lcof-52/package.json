@@ -1,0 +1,8 @@
+{
+  "id": "52",
+  "category": "offer",
+  "title": "两个链表的第一个公共节点",
+  "index": "lcof-52",
+  "difficulty": "easy",
+  "language": "ts"
+}

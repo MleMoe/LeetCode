@@ -1,11 +1,7 @@
-const fs = require('fs')
-const {
-  getAllProblems,
-  generateProblemMd,
-  readLanguageByExt,
-} = require('../utils/toc')
+import * as fs from 'fs'
+import { getAllProblems, generateProblemMd, readLanguageByExt } from './toc'
 
-const distFolder = './dist'
+const distFolder = 'dist'
 
 // Get yaml info
 let problems = getAllProblems()

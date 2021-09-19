@@ -1,20 +1,22 @@
 {
   "name": "leetcode",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "description": "LeetCode Practice",
   "repository": "https://github.com/MleMoe/LeetCode.git",
   "license": "MIT",
+  "bin": {
+    "leet": "./cli/index.js"
+  },
   "scripts": {
-    "build": "yarn generate:TOC && cp public/* dist",
-    "generate:TOC": "node scripts/generateTOC.js",
+    "build": "yarn generate && cp public/* dist",
+    "generate": "NODE_OPTIONS='--experimental-specifier-resolution=node' node cli/generateTOC.js",
     "lint": "eslint --fix ./**/*.js",
     "start": "leet start",
     "solve": "leet solve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@yunyoujun/leetcode": "^0.0.3",
     "@yunyoujun/logger": "^0.1.2",
     "commander": "^7.2.0",
     "inquirer": "^8.0.0",
