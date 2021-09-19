@@ -1,0 +1,8 @@
+{
+  "id": "50",
+  "category": "offer",
+  "title": "第一个只出现一次的字符",
+  "index": "lcof-50",
+  "difficulty": "easy",
+  "language": "ts"
+}
