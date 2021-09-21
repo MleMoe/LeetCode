@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import inquirer from 'inquirer'
-import * as shell from 'shelljs'
+import shell from 'shelljs'
 
 import { getAllProblems } from './toc'
 import { logger } from './logger'
