@@ -21,7 +21,7 @@ function partion(nums: number[], l: number, h: number): number {
   return l
 }
 
-function quickSort(nums: number[], l: number, h: number) {
+export function quickSort(nums: number[], l: number, h: number) {
   if (l < h) {
     const pivotIndex = partion(nums, l, h)
     arguments.callee(nums, l, pivotIndex - 1)
@@ -52,7 +52,7 @@ function merge(lefts: number[], rights: number[]) {
   return res.concat(lefts.length ? lefts : rights)
 }
 
-function mergeSort(nums: number[]) {
+export function mergeSort(nums: number[]) {
   if (nums.length <= 1) {
     return nums
   }
