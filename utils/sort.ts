@@ -24,15 +24,15 @@ function partion(nums: number[], l: number, h: number): number {
 export function quickSort(nums: number[], l: number, h: number) {
   if (l < h) {
     const pivotIndex = partion(nums, l, h)
-    arguments.callee(nums, l, pivotIndex - 1)
-    arguments.callee(nums, pivotIndex + 1, h)
+    quickSort(nums, l, pivotIndex - 1)
+    quickSort(nums, pivotIndex + 1, h)
   }
 }
 
 const paraNums = [2, 3, 1, 0, 4, 8, 9, 6]
-// quickSort(paraNums, 0, paraNums.length - 1)
+quickSort(paraNums, 0, paraNums.length - 1)
 
-// console.log(paraNums)
+console.log(paraNums)
 
 /**
  * 归并排序
@@ -60,4 +60,4 @@ export function mergeSort(nums: number[]) {
   return merge(mergeSort(nums.slice(0, mid)), mergeSort(nums.slice(mid)))
 }
 
-// console.log(mergeSort(paraNums))
+console.log(mergeSort(paraNums))

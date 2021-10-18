@@ -34,7 +34,7 @@ export function listToTree(items: (number | string | null)[]) {
     node && index * 2 + 1 < nodes.length && (node.left = nodes[index * 2 + 1])
     node && index * 2 + 2 < nodes.length && (node.right = nodes[index * 2 + 2])
   })
-  inOrder(nodes[0])
+  // inOrder(nodes[0])
   return nodes[0]
 }
 
@@ -52,6 +52,7 @@ function inOrder(root: TreeNode) {
       p = node.right
     }
   }
-  console.log(nums.length)
+  // console.log(nums.length)
   console.log(nums)
+  return nums
 }

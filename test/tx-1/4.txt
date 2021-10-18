@@ -1,0 +1,13 @@
+写出你所知道的HTTP 请求header 和 响应header，以及它们可能的值和值的含义。
+
+1. referer
+请求地址
+2. origin
+来源
+3. cookies / set-cookies
+4. cache-control max-age
+强缓存
+5. if-no-match / etag
+协商缓存 id 标注
+6. last-modify-since / expires
+协商缓存 时间标注
