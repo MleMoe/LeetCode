@@ -18,6 +18,7 @@ function findContinuousSequence(target: number): number[][] {
 		sum = ((i + j) * (j - i + 1)) / 2
 		if (sum === target) {
 			res.push(new Array(j - i + 1).fill(0).map((_, index) => index + i))
+			i++
 			j++
 		} else if (sum < target) {
 			j++
