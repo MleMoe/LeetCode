@@ -107,9 +107,11 @@ async function promptID(category = 'leetcode') {
  * @returns
  */
 function findProblemByID(id, category = 'leetcode') {
+  console.log(id, category)
   return problems.find((problem) => {
     let isValidId = false
-    let isValidCategory = problem.category === category
+    console.log(problem.category, category)
+    let isValidCategory = problem.category ?? 'leetcode' === category
 
     if (categoryMap[category].id.type === 'number') {
       isValidId = problem.id === parseInt(id)
@@ -117,9 +119,12 @@ function findProblemByID(id, category = 'leetcode') {
       isValidId = problem.id === id
     }
 
-    if (category === 'leetcode') {
-      isValidCategory = true
-    }
+    /**
+     * wrong logic
+     */
+    // if (category === 'leetcode') {
+    //   isValidCategory = true
+    // }
 
     return isValidCategory && isValidId
   })
