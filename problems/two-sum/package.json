@@ -1,0 +1,8 @@
+{
+  "id": 1,
+  "category": "leetcode",
+  "title": "两数之和",
+  "index": "two-sum",
+  "difficulty": "easy",
+  "language": "ts"
+}

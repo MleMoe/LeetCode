@@ -39,9 +39,9 @@ program.command('start').action(async () => {
     extraInfo.id = parseInt(id)
   }
 
-  if (category !== 'leetcode') {
-    extraInfo.category = category
-  }
+  // if (category !== 'leetcode') {
+  extraInfo.category = category
+  // }
 
   const questions = [
     {
@@ -64,8 +64,8 @@ program.command('start').action(async () => {
       type: 'list',
       name: 'language',
       message: '使用语言: ',
-      choices: ['py', 'js', 'ts'],
-      default: 'py',
+      choices: ['py', 'ts'],
+      default: 'ts',
     },
   ]
 
