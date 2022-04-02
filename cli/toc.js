@@ -24,7 +24,14 @@ function getAllProblems() {
     const data = fs
       .readFileSync(`${problemsPath}/${problemFolder}/package.json`, 'UTF-8')
       .toString()
-    problems.push(JSON.parse(data))
+    const code = fs
+      .readFileSync(`${problemsPath}/${problemFolder}/solution.ts`, 'UTF-8')
+      .toString()
+    const problem = JSON.parse(data)
+    problem.thinking = code
+      .slice(4, code.indexOf('* @param'))
+      .replace(/\*/g, '')
+    problems.push(problem)
   })
 
   // 按序号升序排序
@@ -70,7 +77,7 @@ function generateProblemMd(problem) {
     problem.index
   }](${github_url + 'problems/' + problem.index})|${problem.difficulty}|${
     problem.language
-  }|\n`
+  }|${problem.thinking}|\n`
 }
 
 export { getAllProblems, generateProblemMd, readLanguageByExt, getProblemById }
