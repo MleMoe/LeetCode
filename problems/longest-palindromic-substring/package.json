@@ -1,0 +1,8 @@
+{
+  "id": 5,
+  "category": "leetcode",
+  "title": "最长回文子串",
+  "index": "longest-palindromic-substring",
+  "difficulty": "medium",
+  "language": "ts"
+}
