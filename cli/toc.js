@@ -31,6 +31,7 @@ function getAllProblems() {
     problem.thinking = code
       .slice(4, code.indexOf('* @param'))
       .replace(/\*/g, '')
+      .replace(/\n/g, '<br>')
     problems.push(problem)
   })
 
