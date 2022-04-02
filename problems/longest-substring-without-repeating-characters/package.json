@@ -1,0 +1,8 @@
+{
+  "id": 3,
+  "category": "leetcode",
+  "title": "无重复字符的最长子串",
+  "index": "longest-substring-without-repeating-characters",
+  "difficulty": "medium",
+  "language": "ts"
+}
