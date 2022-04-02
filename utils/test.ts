@@ -9,32 +9,32 @@ export function testFunction(
   testcases: any[],
   expectedReults?: any[]
 ) {
-  console.log('Problem:', callback.name);
+  console.log('Problem:', callback.name)
 
   testcases.forEach((testcase, i) => {
-    let result;
-    result = callback(...testcase);
-    console.log();
-    let title = `测试 ${i + 1}`;
+    let result
+    result = callback(...testcase)
+    console.log()
+    let title = `测试 ${i + 1}`
     if (expectedReults) {
-      title += ': ';
+      title += ': '
       if (isEqual(result, expectedReults[i])) {
-        title += '✅';
+        title += '✅'
       } else {
-        title += '❌';
+        title += '❌'
       }
     }
 
-    console.log(title);
-    console.log(`输入:`, ...testcase);
-    console.log('输出:', result);
+    console.log(title)
+    console.log(`输入:`, ...testcase)
+    console.log('输出:', result)
 
     if (expectedReults) {
-      console.log('预期结果:', expectedReults[i]);
+      console.log('预期结果:', expectedReults[i])
     } else {
-      console.log();
+      console.log()
     }
-  });
+  })
 }
 
 function isEqual(a: any, b: any) {
@@ -53,19 +53,19 @@ function isEqual(a: any, b: any) {
    */
   // 除了引用类型都可以判断
   if (!(a instanceof Object) || !(b instanceof Object)) {
-    return Object.is(a, b);
+    return Object.is(a, b)
   }
   if (Object.keys(a).length !== Object.keys(b).length) {
-    return false;
+    return false
   }
 
-  const keysA = Object.keys(a);
-  let result = true;
+  const keysA = Object.keys(a)
+  let result = true
   for (const key of keysA) {
-    result &&= isEqual(a[key], b[key]);
+    result &&= isEqual(a[key], b[key])
     if (!result) {
-      return false;
+      return false
     }
   }
-  return true;
+  return true
 }
