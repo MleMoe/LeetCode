@@ -7,7 +7,7 @@ const distFolder = 'dist'
 let problems = getAllProblems()
 let toc_md = `# Problems (${problems.length})
 
-|#|Title|Solution|Difficulty|Language|Language|
+|#|Title|Solution|Difficulty|Language|Thinking|
 |-|-----|--------|----------|--------|--------|
 `
 
