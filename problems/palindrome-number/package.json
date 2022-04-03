@@ -1,0 +1,8 @@
+{
+  "id": 9,
+  "category": "leetcode",
+  "title": "回文数",
+  "index": "palindrome-number",
+  "difficulty": "easy",
+  "language": "ts"
+}
