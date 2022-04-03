@@ -107,10 +107,8 @@ async function promptID(category = 'leetcode') {
  * @returns
  */
 function findProblemByID(id, category = 'leetcode') {
-  console.log(id, category)
   return problems.find((problem) => {
     let isValidId = false
-    console.log(problem.category, category)
     let isValidCategory = problem.category ?? 'leetcode' === category
 
     if (categoryMap[category].id.type === 'number') {

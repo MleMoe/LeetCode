@@ -1,0 +1,8 @@
+{
+  "id": 8,
+  "category": "leetcode",
+  "title": "字符串转换整数 (atoi)",
+  "index": "string-to-integer-atoi",
+  "difficulty": "medium",
+  "language": "ts"
+}
