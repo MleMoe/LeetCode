@@ -1,0 +1,8 @@
+{
+  "id": 6,
+  "category": "leetcode",
+  "title": "Z字形变换",
+  "index": "zigzag-conversion",
+  "difficulty": "medium",
+  "language": "ts"
+}

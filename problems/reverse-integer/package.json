@@ -1,0 +1,8 @@
+{
+  "id": 7,
+  "category": "leetcode",
+  "title": "整数反转",
+  "index": "reverse-integer",
+  "difficulty": "medium",
+  "language": "ts"
+}
