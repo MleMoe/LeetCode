@@ -55,7 +55,8 @@ function readLanguageByExt(problem) {
   for (const file of files) {
     extname.add(path.extname(file).slice(1))
   }
-  return [...extname].join('/')
+
+  return [...extname].filter((val) => val !== 'json').join('/')
 }
 
 /**
@@ -75,9 +76,9 @@ function getProblemById(id, problems) {
  * @param {*} problem
  */
 function generateProblemMd(problem) {
-  return `|${problem.id}|[${problem.title}](${leetcode_url + problem.index})|[${
-    problem.index
-  }](${github_url + 'problems/' + problem.index})|${problem.difficulty}|${
+  return `|${problem.id}|[${problem.title}](${
+    leetcode_url + problem.index
+  })|[√](${github_url + 'problems/' + problem.index})|${problem.difficulty}|${
     problem.language
   }|${problem.thinking}|\n`
 }
