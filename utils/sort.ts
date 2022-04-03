@@ -32,7 +32,7 @@ export function quickSort(nums: number[], l: number, h: number) {
 const paraNums = [2, 3, 1, 0, 4, 8, 9, 6]
 quickSort(paraNums, 0, paraNums.length - 1)
 
-console.log(paraNums)
+// console.log(paraNums)
 
 /**
  * 归并排序
@@ -61,3 +61,16 @@ export function mergeSort(nums: number[]) {
 }
 
 console.log(mergeSort(paraNums))
+
+export function bubbleSort(nums: number[]) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] > nums[j]) {
+        nums[i], (nums[j] = nums[j]), nums[i]
+      }
+    }
+  }
+  return nums
+}
+
+console.log(bubbleSort(paraNums))
