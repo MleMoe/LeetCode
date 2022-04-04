@@ -1,0 +1,8 @@
+{
+  "id": 14,
+  "category": "leetcode",
+  "title": "最长公共前缀",
+  "index": "longest-common-prefix",
+  "difficulty": "easy",
+  "language": "ts"
+}
