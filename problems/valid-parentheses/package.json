@@ -1,0 +1,8 @@
+{
+  "id": 20,
+  "category": "leetcode",
+  "title": "有效的括号",
+  "index": "valid-parentheses",
+  "difficulty": "easy",
+  "language": "ts"
+}

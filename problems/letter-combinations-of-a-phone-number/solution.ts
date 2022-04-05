@@ -1,3 +1,8 @@
+/**
+ * 使用队列，时间 O(3**n * 4**m)
+ * @param digits
+ * @returns
+ */
 function letterCombinations(digits: string): string[] {
   const numStrMap = {
     '2': ['a', 'b', 'c'],
