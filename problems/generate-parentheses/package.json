@@ -1,0 +1,8 @@
+{
+  "id": 22,
+  "category": "leetcode",
+  "title": "括号生成",
+  "index": "generate-parentheses",
+  "difficulty": "medium",
+  "language": "ts"
+}

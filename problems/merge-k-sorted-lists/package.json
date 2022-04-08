@@ -1,0 +1,8 @@
+{
+  "id": 23,
+  "category": "leetcode",
+  "title": "合并K个升序链表",
+  "index": "merge-k-sorted-lists",
+  "difficulty": "hard",
+  "language": "ts"
+}
